@@ -55,8 +55,6 @@ public class ArticleDAO extends JdbcDaoSupport {
 		String sql = "update articles set title = ? , content = ?,author = ? , date = ? where id = ?";
 		Connection connection = null;
 
-		System.out.println(article.getContent());
-		
 		try {
 			connection = this.getDataSource().getConnection();
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
